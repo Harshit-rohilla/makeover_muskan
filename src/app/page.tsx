@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HERO_OG_IMAGE } from "@/lib/hero-assets";
 import Hero from "@/components/home/Hero";
 import FeaturedWork from "@/components/home/FeaturedWork";
 import QuickServices from "@/components/home/QuickServices";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/images/hero/hero.jpg",
+        url: HERO_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Makeover by Muskan - Professional Makeup Artistry",

@@ -27,11 +27,6 @@ export type PortfolioCategory =
   | "special-effects"
   | "everyday";
 
-export interface CategoryOption {
-  id: PortfolioCategory;
-  label: string;
-}
-
 export interface LookComparisonPair {
   id: string;
   left: string;
@@ -39,23 +34,6 @@ export interface LookComparisonPair {
   leftLabel: string;
   rightLabel: string;
   alt: string;
-}
-
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  price: string;
-  duration: string;
-  features: string[];
-  icon: string;
-  popular?: boolean;
-}
-
-export interface ServiceCategory {
-  id: string;
-  title: string;
-  services: Service[];
 }
 
 export interface TimelineEntry {

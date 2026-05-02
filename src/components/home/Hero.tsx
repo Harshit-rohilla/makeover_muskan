@@ -4,9 +4,7 @@ import { useState, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { SITE_CONFIG } from "@/lib/constants";
-
-const HERO_DESKTOP = "/images/hero/hero-desktop.jpg";
-const HERO_MOBILE = "/images/hero/hero-mob.jpg";
+import { HERO_DESKTOP, HERO_MOBILE } from "@/lib/hero-assets";
 
 const BLUR_PLACEHOLDER =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjRDMkMyIi8+PC9zdmc+";

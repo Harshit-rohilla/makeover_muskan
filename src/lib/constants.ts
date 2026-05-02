@@ -1,4 +1,4 @@
-import { NavLink, CategoryOption } from "@/types";
+import { NavLink } from "@/types";
 
 export const SITE_CONFIG = {
   name: "Makeover by Muskan",
@@ -17,15 +17,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-];
-
-export const CATEGORIES: CategoryOption[] = [
-  { id: "all", label: "All" },
-  { id: "bridal", label: "Bridal" },
-  { id: "editorial", label: "Editorial" },
-  { id: "party", label: "Party Glam" },
-  { id: "special-effects", label: "Special Effects" },
-  { id: "everyday", label: "Everyday" },
 ];
 
 export const WHATSAPP_URL = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(SITE_CONFIG.whatsappMessage)}`;

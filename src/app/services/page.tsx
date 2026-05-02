@@ -8,6 +8,7 @@ import SectionDivider from "@/components/shared/SectionDivider";
 import AnimatedContainer from "@/components/shared/AnimatedContainer";
 import JsonLd from "@/components/shared/JsonLd";
 import { SITE_CONFIG } from "@/lib/constants";
+import { HERO_OG_IMAGE } from "@/lib/hero-assets";
 import { OCCASION_PRICES, getWhatsAppUrl } from "@/lib/indian-occasion-pricing";
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     url: "/services",
     images: [
       {
-        url: "/images/hero/hero.jpg",
+        url: HERO_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Makeover by Muskan - Services & Pricing",

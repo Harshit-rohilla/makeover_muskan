@@ -6,6 +6,7 @@ import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import JsonLd from "@/components/shared/JsonLd";
 import { SITE_CONFIG } from "@/lib/constants";
+import { HERO_OG_IMAGE } from "@/lib/hero-assets";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: [
       {
-        url: "/images/hero/hero.jpg",
+        url: HERO_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Makeover by Muskan - Professional Makeup Artistry",
@@ -80,10 +81,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Makeover by Muskan | Professional Makeup Artist",
     description: SITE_CONFIG.description,
-    images: ["/images/hero/hero.jpg"],
+    images: [HERO_OG_IMAGE],
   },
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -93,7 +102,7 @@ const localBusinessJsonLd = {
   name: SITE_CONFIG.name,
   description: SITE_CONFIG.description,
   url: SITE_CONFIG.siteUrl,
-  image: `${SITE_CONFIG.siteUrl}/images/hero/hero.jpg`,
+  image: `${SITE_CONFIG.siteUrl}${HERO_OG_IMAGE}`,
   email: SITE_CONFIG.email,
   telephone: SITE_CONFIG.whatsappNumber,
   sameAs: [SITE_CONFIG.instagram],
