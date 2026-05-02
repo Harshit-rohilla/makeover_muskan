@@ -20,19 +20,19 @@ export const PORTFOLIO_IMAGES: PortfolioImage[] = [
     span: "tall",
   },
   {
-    id: "3",
-    src: "/images/portfolio/img-03.jpg",
-    alt: "Party glam - Evening sparkle",
-    category: "party",
+    id: "4",
+    src: "/images/portfolio/img-04.jpg",
+    alt: "Everyday beauty - Natural glow",
+    category: "everyday",
     width: 800,
     height: 1200,
     span: "tall",
   },
   {
-    id: "4",
-    src: "/images/portfolio/img-04.jpg",
-    alt: "Everyday beauty - Natural glow",
-    category: "everyday",
+    id: "12",
+    src: "/images/portfolio/img-12.jpg",
+    alt: "Party glam - Festive shimmer",
+    category: "party",
     width: 800,
     height: 1200,
     span: "tall",
@@ -100,23 +100,33 @@ export const PORTFOLIO_IMAGES: PortfolioImage[] = [
     height: 1200,
     span: "tall",
   },
+  {
+    id: "3",
+    src: "/images/portfolio/img-03.jpg",
+    alt: "Party glam - Evening sparkle",
+    category: "party",
+    width: 800,
+    height: 1200,
+    span: "tall",
+  },
 ];
 
-export const FEATURED_IMAGES = PORTFOLIO_IMAGES.slice(0, 8);
+/** Homepage preview: same order as portfolio, fewer items, no lightbox. */
+export const HOME_PORTFOLIO_IMAGES = PORTFOLIO_IMAGES.slice(0, 6);
 
 export const LOOK_COMPARISON_PAIRS: LookComparisonPair[] = [
   {
     id: "lc1",
-    left: "/images/portfolio/img-02.jpg",
-    right: "/images/portfolio/img-03.jpg",
+    left: "/images/portfolio/img-08.jpg",
+    right: "/images/portfolio/img-09.jpg",
     leftLabel: "Soft Glam",
     rightLabel: "Bold Glam",
     alt: "Bridal looks",
   },
   {
     id: "lc2",
-    left: "/images/portfolio/img-04.jpg",
-    right: "/images/portfolio/img-05.jpg",
+    left: "/images/portfolio/img-08.jpg",
+    right: "/images/portfolio/img-12.jpg",
     leftLabel: "Day Look",
     rightLabel: "Evening Look",
     alt: "Editorial styles",
@@ -125,8 +135,8 @@ export const LOOK_COMPARISON_PAIRS: LookComparisonPair[] = [
     id: "lc3",
     left: "/images/portfolio/img-06.png",
     right: "/images/portfolio/img-07.jpg",
-    leftLabel: "Natural",
-    rightLabel: "Dramatic",
+    leftLabel: "Party",
+    rightLabel: "Party",
     alt: "Everyday to glam",
   },
 ];

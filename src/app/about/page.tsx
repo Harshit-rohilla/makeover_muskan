@@ -9,14 +9,14 @@ import AnimatedContainer from "@/components/shared/AnimatedContainer";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about the artist behind Makeover by Muskan — a decade of passion, artistry, and making people feel beautiful.",
+    "Learn about the artist behind Makeover by Muskan — six years of passion, artistry, and making people feel beautiful.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About | Makeover by Muskan",
     description:
-      "Learn about the artist behind Makeover by Muskan — a decade of passion, artistry, and making people feel beautiful.",
+      "Learn about the artist behind Makeover by Muskan — six years of passion, artistry, and making people feel beautiful.",
     url: "/about",
     images: [
       {

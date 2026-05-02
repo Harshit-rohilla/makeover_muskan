@@ -75,44 +75,44 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
     ],
   },
-  {
-    id: "lessons",
-    title: "Lessons & Consultations",
-    services: [
-      {
-        id: "one-on-one",
-        title: "1-on-1 Makeup Lesson",
-        description: "Personalized makeup lesson tailored to your features, style, and skill level.",
-        price: "From $120",
-        duration: "1.5-2 hours",
-        features: ["Personalized routine", "Product recommendations", "Technique training", "Take-home guide", "Follow-up support"],
-        icon: "\u{1F393}",
-      },
-      {
-        id: "consultation",
-        title: "Beauty Consultation",
-        description: "Expert analysis of your features with personalized product and technique recommendations.",
-        price: "From $75",
-        duration: "45 minutes",
-        features: ["Skin analysis", "Color matching", "Product guide", "Technique tips", "Written summary"],
-        icon: "\u{1F484}",
-      },
-    ],
-  },
 ];
 
 export const TIMELINE_ENTRIES: TimelineEntry[] = [
-  { year: "2015", title: "The Beginning", description: "Started the journey with a passion for colors and a dream of making people feel beautiful. Completed professional makeup certification." },
-  { year: "2017", title: "First Editorial Feature", description: "Landed the first magazine cover shoot, opening doors to the editorial and fashion world." },
-  { year: "2019", title: "Studio Launch", description: "Opened Makeover by Muskan, a dedicated space for consultations, lessons, and bridal preparations." },
-  { year: "2021", title: "Award Recognition", description: "Received the Regional Makeup Artist of the Year award, celebrating years of dedication to the craft." },
-  { year: "2023", title: "Going International", description: "Expanded to destination weddings and international fashion weeks, bringing artistry across borders." },
-  { year: "2025", title: "10 Years Strong", description: "Celebrating a decade of beauty, with thousands of happy clients and a growing team of talented artists." },
+  {
+    year: "2019",
+    title: "Professional Training",
+    description:
+      "Completed professional makeup artistry training and certification—the foundation that everything else was built on.",
+  },
+  {
+    year: "2020",
+    title: "Working with Clients",
+    description:
+      "Started taking on professional bookings, working hands-on with brides and clients and turning technique into real-world experience.",
+  },
+  {
+    year: "2022",
+    title: "Studio Launch",
+    description:
+      "Opened Makeover by Muskan, a dedicated space for consultations, lessons, and bridal preparations as the practice grew.",
+  },
+  {
+    year: "2023",
+    title: "Bridal & Beyond",
+    description:
+      "Expanded into destination weddings and editorial work, with a growing focus on bridal artistry and memorable wedding-day looks.",
+  },
+  {
+    year: "2026",
+    title: "6+ Years of Beauty",
+    description:
+      "Six years and counting: hundreds of happy clients, 100+ bridal transformations, and the same passion for helping every face shine.",
+  },
 ];
 
 export const STATS: Stat[] = [
   { value: 500, suffix: "+", label: "Happy Clients" },
-  { value: 10, suffix: "+", label: "Years Experience" },
-  { value: 50, suffix: "+", label: "Bridal Looks" },
-  { value: 15, suffix: "", label: "Awards Won" },
+  { value: 6, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "+", label: "Bridal Looks" },
+  { value: 50, suffix: "+", label: "Luxury Brands" },
 ];

@@ -52,14 +52,14 @@ export default function ImageLightbox({ image, onClose, onPrev, onNext }: ImageL
             className="relative max-w-5xl max-h-[85vh] w-full mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-[70vh] sm:h-[80vh] rounded-xl overflow-hidden">
+            <div className="flex justify-center rounded-xl overflow-hidden">
               <CloudImage
                 src={image.src}
                 alt={image.alt}
                 width={image.width}
                 height={image.height}
-                fill
-                className="object-contain"
+                objectFit="contain"
+                className="max-h-[80vh] w-auto rounded-xl"
                 sizes="90vw"
                 priority
               />

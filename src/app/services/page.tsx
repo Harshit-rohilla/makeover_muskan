@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 import SectionHeading from "@/components/shared/SectionHeading";
-import PricingSection from "@/components/services/PricingSection";
+import OccasionPricingGrid from "@/components/services/OccasionPricingGrid";
+import ServicePoliciesSection from "@/components/services/ServicePoliciesSection";
+import BrandMarquee from "@/components/services/BrandMarquee";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import SectionDivider from "@/components/shared/SectionDivider";
 import AnimatedContainer from "@/components/shared/AnimatedContainer";
 import JsonLd from "@/components/shared/JsonLd";
 import { SITE_CONFIG } from "@/lib/constants";
-import { SERVICE_CATEGORIES } from "@/lib/services-data";
+import { OCCASION_PRICES, getWhatsAppUrl } from "@/lib/indian-occasion-pricing";
 
 export const metadata: Metadata = {
   title: "Services & Pricing",
   description:
-    "Explore our makeup services and pricing for bridal, editorial, events, lessons, and consultations at Makeover by Muskan.",
+    "Professional bridal and occasion makeup in Delhi/NCR and outstation. View INR pricing for bridal, party, haldi, mehndi, sangeet, and more at Makeover by Muskan.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title: "Services & Pricing | Makeover by Muskan",
     description:
-      "Explore our makeup services and pricing for bridal, editorial, events, lessons, and consultations.",
+      "Makeup services for every occasion in Delhi/NCR and outstation — bridal, party, haldi, mehndi, sangeet, and more. Prices in INR.",
     url: "/services",
     images: [
       {
@@ -43,18 +45,21 @@ const servicesJsonLd = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Makeup Services",
-    itemListElement: SERVICE_CATEGORIES.flatMap((cat) =>
-      cat.services.map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.title,
-          description: service.description,
-        },
-        price: service.price,
-        priceCurrency: "USD",
-      }))
-    ),
+    itemListElement: OCCASION_PRICES.map((occasion) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: occasion.title,
+      },
+      price: occasion.priceNcr,
+      priceCurrency: "INR",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: occasion.priceNcr,
+        priceCurrency: "INR",
+        description: "Starting price for Delhi/NCR",
+      },
+    })),
   },
 };
 
@@ -63,24 +68,25 @@ export default function ServicesPage() {
     <>
       <JsonLd data={servicesJsonLd} />
 
-      <section
-        className="pt-28 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
-        style={{ backgroundColor: "var(--color-cream)" }}
-      >
-        <SectionHeading
-          as="h1"
-          title="Services & Pricing"
-          subtitle="Professional artistry tailored to your needs and occasion"
-        />
-        <PricingSection />
+      <section className="w-full" style={{ backgroundColor: "var(--color-cream)" }}>
+        <div className="pt-28 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          <SectionHeading
+            as="h1"
+            title="Services & Pricing"
+            subtitle="Professional artistry for every occasion — Delhi/NCR and beyond"
+          />
+          <OccasionPricingGrid />
+          <ServicePoliciesSection />
+        </div>
       </section>
 
-      <SectionDivider from="var(--color-cream)" to="var(--color-blush)" />
+      <SectionDivider from="var(--color-cream)" to="var(--color-charcoal)" />
 
-      <section
-        className="py-20 sm:py-28 text-center px-4"
-        style={{ backgroundColor: "var(--color-blush)" }}
-      >
+      <BrandMarquee />
+
+      <SectionDivider from="var(--color-charcoal)" to="var(--color-blush)" />
+
+      <section className="w-full py-20 sm:py-28 text-center px-4" style={{ backgroundColor: "var(--color-blush)" }}>
         <AnimatedContainer>
           <h2
             className="text-3xl sm:text-4xl font-bold text-charcoal mb-4"
@@ -89,10 +95,12 @@ export default function ServicesPage() {
             Ready to Book?
           </h2>
           <p className="text-charcoal/60 mb-8 max-w-md mx-auto">
-            Send us a message on WhatsApp to discuss your needs and schedule
-            your session.
+            Send a message on WhatsApp to discuss your occasion and lock in your date.
           </p>
-          <WhatsAppButton label="Book Your Session" />
+          <WhatsAppButton
+            label="Book Your Session"
+            href={getWhatsAppUrl("Hi! I'd like to book a makeup session with Makeover by Muskan.")}
+          />
         </AnimatedContainer>
       </section>
 

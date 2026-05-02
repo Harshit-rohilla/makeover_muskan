@@ -21,11 +21,6 @@ const highlights = [
     title: "Events",
     description: "Red carpet ready for any occasion. Glamorous finishes that turn heads all night long.",
   },
-  {
-    icon: "\u{1F393}",
-    title: "Lessons",
-    description: "Learn the techniques behind the artistry. Personalized sessions tailored to your skill level.",
-  },
 ];
 
 export default function QuickServices() {
@@ -36,7 +31,7 @@ export default function QuickServices() {
         subtitle="Professional artistry for every occasion"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {highlights.map((item, i) => (
           <AnimatedContainer key={item.title} delay={i * 0.1}>
             <motion.div

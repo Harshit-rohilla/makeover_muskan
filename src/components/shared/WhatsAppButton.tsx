@@ -7,6 +7,8 @@ interface WhatsAppButtonProps {
   floating?: boolean;
   label?: string;
   className?: string;
+  /** Override the destination URL (e.g. with a custom prefilled message). Defaults to WHATSAPP_URL. */
+  href?: string;
 }
 
 function WhatsAppIcon() {
@@ -21,11 +23,14 @@ export default function WhatsAppButton({
   floating = false,
   label = "Book via WhatsApp",
   className = "",
+  href,
 }: WhatsAppButtonProps) {
+  const url = href ?? WHATSAPP_URL;
+
   if (floating) {
     return (
       <motion.a
-        href={WHATSAPP_URL}
+        href={url}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-lg hover:shadow-xl"
@@ -44,7 +49,7 @@ export default function WhatsAppButton({
 
   return (
     <motion.a
-      href={WHATSAPP_URL}
+      href={url}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-medium text-base shadow-lg hover:shadow-xl transition-shadow ${className}`}

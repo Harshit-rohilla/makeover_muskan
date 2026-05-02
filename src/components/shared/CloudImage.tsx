@@ -11,6 +11,7 @@ interface CloudImageProps {
   priority?: boolean;
   className?: string;
   fill?: boolean;
+  objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   onLoad?: () => void;
 }
 
@@ -26,6 +27,7 @@ export default function CloudImage({
   priority = false,
   className = "",
   fill = false,
+  objectFit = "cover",
   onLoad,
 }: CloudImageProps) {
   return (
@@ -42,7 +44,7 @@ export default function CloudImage({
       placeholder="blur"
       blurDataURL={BLUR_PLACEHOLDER}
       onLoad={onLoad}
-      style={{ objectFit: "cover" }}
+      style={{ objectFit }}
     />
   );
 }

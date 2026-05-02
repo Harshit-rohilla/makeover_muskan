@@ -45,7 +45,7 @@ export default function BioSection() {
 
         <div className="space-y-4 text-charcoal/70 leading-relaxed">
           <p>
-            With over a decade of experience in the beauty industry, I&apos;ve had the
+            With more than six years of experience in the beauty industry, I&apos;ve had the
             privilege of working with hundreds of clients, from blushing brides to
             high-fashion models gracing magazine covers.
           </p>
@@ -69,13 +69,18 @@ export default function BioSection() {
           </div>
           <div className="w-px bg-charcoal/10" />
           <div>
-            <p className="text-3xl font-bold text-rose">10+</p>
+            <p className="text-3xl font-bold text-rose">6+</p>
             <p className="text-charcoal/50 text-sm">Years</p>
           </div>
           <div className="w-px bg-charcoal/10" />
           <div>
-            <p className="text-3xl font-bold text-rose">15</p>
-            <p className="text-charcoal/50 text-sm">Awards</p>
+            <p className="text-3xl font-bold text-rose">100+</p>
+            <p className="text-charcoal/50 text-sm">Bridal Looks</p>
+          </div>
+          <div className="w-px bg-charcoal/10" />
+          <div>
+            <p className="text-3xl font-bold text-rose">50+</p>
+            <p className="text-charcoal/50 text-sm">Luxury Brands</p>
           </div>
         </div>
       </motion.div>
